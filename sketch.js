@@ -23,7 +23,7 @@ p.setup = function () {
 }
 
 p.modelReady = function () {
- console.log("Model ready!");
+
 }
 
 p.draw = function () {
@@ -298,6 +298,99 @@ let a = function (z) {
         }
       };
       var bolmeetdimensietwee = new p5(w, 'bolkomt'); */
+
+
+
+      let bolvier1 = function (b) {
+
+        let radius = 150;
+        let angle = 0;
+        
+        b.setup = function() {
+          b.createCanvas(b.windowWidth, b.windowHeight);
+          b.rectMode(b.CENTER);
+        }
+        
+        b.draw = function() {
+          b.background('#ffffff');
+          b.translate(b.windowWidth/2, b.windowHeight/2);
+          b.fill('#000000');
+          b.drawingContext.shadowOffsetX = 0;
+          b.drawingContext.shadowOffsetY = 0;
+          b.drawingContext.shadowBlur = 0;
+          b.drawingContext.shadowColor = 'white';
+          b.ellipse(0, 0, 10, 10);
+          b.rotate (angle);
+          b.drawingContext.shadowOffsetX = 5;
+          b.drawingContext.shadowOffsetY = -5;
+          b.drawingContext.shadowBlur = 10;
+          b.drawingContext.shadowColor = 'black';
+          b.fill('#ffffff');
+          b.ellipse(200, 0, b.mouseY/2-b.windowHeight/4, b.mouseY/2-b.windowHeight/4);
+          b.fill('#ffffff');
+          b.drawingContext.shadowOffsetX = 0;
+          b.drawingContext.shadowOffsetY = 0;
+          b.drawingContext.shadowBlur = 0;
+          b.drawingContext.shadowColor = 'white';
+          b.square(-200,0,200)
+          angle = angle + b.mouseX/10000;
+        }
+        };
+        
+        var bolvierkant1d = new p5(bolvier1, 'hfst20');
+
+
+        let lichtaan = function (m) {
+
+          let roofcolor = 0;
+          let leftcolor = 0;
+          m.setup = function () {
+            m.createCanvas(m.windowWidth, m.windowHeight);
+            m.rectMode(m.CENTER)
+          }
+          
+          m.draw = function () {
+            m.background(255);
+            m.stroke(leftcolor)
+            m.fill(leftcolor)
+            m.quad(m.windowWidth/2-100, m.windowHeight/2+100, m.windowWidth/2-150,m.windowHeight/2+50,m.windowWidth/2-150,m.windowHeight/2-150,m.windowWidth/2-100,m.windowHeight/2-100)
+            m.stroke(roofcolor)
+            m.fill(roofcolor)
+            m.quad(m.windowWidth/2-100,m.windowHeight/2-100,m.windowWidth/2-150,m.windowHeight/2-150,m.windowWidth/2+50,m.windowHeight/2-150,m.windowWidth/2+100,m.windowHeight/2-100)
+            m.fill("black")
+            m.stroke("black")
+            m.square(m.windowWidth/2, m.windowHeight/2, 200)
+          }
+          
+          m.mouseClicked = function () {
+            if (leftcolor === 0) {
+              leftcolor = 50;
+              roofcolor = 220;
+              } else {
+                  leftcolor = 0;
+              roofcolor = 0;
+                }
+          }
+          };
+          var aanlicht = new p5(lichtaan, 'hfst19');
+
+          let threebox = function (boks) {
+
+
+            boks.setup = function () {
+              boks.createCanvas(boks.windowWidth, boks.windowHeight, boks.WEBGL);
+              
+            }
+            boks.draw = function () {
+              boks.background(255);
+              boks.lights(10);
+              boks.rotateX(boks.millis() / 1000);
+              boks.rotateY(boks.millis() / 1000);
+              boks.rotateZ(boks.millis() / 1000);
+              boks.box(200,200,200);
+            }
+            };
+            var vierkantdoos = new p5(threebox, 'hfst22');
       
       
   

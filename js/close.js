@@ -16,7 +16,7 @@ $(document).ready(function(){
     
         if (navigator.userAgent.indexOf('iPhone')!=-1) {
             setTimeout(function(){
-                window.location = 'hoodstuk1.html';
+                window.location = 'index.html';
             },100); 
         } 
     

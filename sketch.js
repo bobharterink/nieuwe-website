@@ -337,7 +337,7 @@ let a = function (z) {
         }
         };
         
-        var bolvierkant1d = new p5(bolvier1, 'hfst20');
+        var bolvierkant1d = new p5(bolvier1, 'diepteeff');
 
 
         let lichtaan = function (m) {
@@ -372,7 +372,7 @@ let a = function (z) {
                 }
           }
           };
-          var aanlicht = new p5(lichtaan, 'hfst19');
+          var aanlicht = new p5(lichtaan, 'rotatieom1d');
 
           let threebox = function (boks) {
 
@@ -390,7 +390,7 @@ let a = function (z) {
               boks.box(200,200,200);
             }
             };
-            var vierkantdoos = new p5(threebox, 'hfst22');
+            var vierkantdoos = new p5(threebox, 'blur3dbox');
       
       
   

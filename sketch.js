@@ -7,7 +7,7 @@ let tx;
 
 
 p.setup = function () {
-
+p5.disableFriendlyErrors = true
  // het laden van het model duurt even..
  p.createCanvas(p.windowWidth, p.windowHeight);
  video = p.createCapture(p.VIDEO);
@@ -131,7 +131,7 @@ q.draw = function () {
   // is kleiner dan 30 EN de muis is ingedrukt kan je het
   // bolletje verplaatsen.
   for(p of points){
-    if(q.dist(q.mouseX,q.mouseY,p.x,p.y)<30 && q.mouseIsPressed){
+    if(q.dist(q.mouseX,q.mouseY,p.x,p.y)<50 && q.mouseIsPressed){
       p.x = q.mouseX;
       p.y = q.mouseY;
       q.fill(0,0,0);
@@ -155,7 +155,7 @@ let a = function (z) {
     z.strokeWeight(0);
     z.stroke(0);
     z.fill(255);
-          if (z.mouseY <=  z.windowHeight/2+60 && z.mouseY >=  z.windowHeight/2-55) {
+      if (z.mouseY <=  z.windowHeight/2+60 && z.mouseY >=  z.windowHeight/2-55) {
      z.rect(z.windowWidth/2+95, z.windowHeight/2, 120, 5);
             }
     z.rect(z.windowWidth/2-75, z.windowHeight/2, 150, 5);
@@ -166,6 +166,25 @@ let a = function (z) {
     z.rect(z.windowWidth/2-405, z.windowHeight/2, 60, 5);
     z.rect(z.windowWidth/2+425, z.windowHeight/2, 30, 5);
     z.rect(z.windowWidth/2-455, z.windowHeight/2, 30, 5);
+    z.rect(z.windowWidth/2+475, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2-490, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2+510, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2-525, z.windowHeight/2, 15, 5);
+    
+    z.rect(z.windowWidth/2+545, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2-560, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2+580, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2-595, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2+615, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2-630, z.windowHeight/2, 15, 5);
+
+    z.rect(z.windowWidth/2+650, z.windowHeight/2, 15, 5);
+    z.rect(z.windowWidth/2-665, z.windowHeight/2, 15, 5);
+
+
+
+
+
     z.stroke(255);
     z.strokeWeight(1);
     z.noFill();        
@@ -196,8 +215,14 @@ let a = function (z) {
         f.fill(0);
         f.polygon(0, 0, f.windowHeight/2, 5);
         f.pop();
+      f.push();
       f.fill(255);
-      f.ellipse(f.ix, f.height/2, f.iy, f.iy);        
+      f.drawingContext.shadowOffsetX = 5;
+      f.drawingContext.shadowOffsetY = -5;
+      f.drawingContext.shadowBlur = 10;
+      f.drawingContext.shadowColor = 'black';
+      f.ellipse(f.ix, f.height/2, f.iy, f.iy);      
+      f.pop();
   
       }
       
@@ -237,7 +262,7 @@ let a = function (z) {
       j.stroke(0);
         j.fill(255);
         j.rect(j.x-(j.y/2),j.height/2-(j.y/2),j.y,j.y);
-                          j.drawingContext.shadowOffsetX = 5;
+        j.drawingContext.shadowOffsetX = 5;
         j.drawingContext.shadowOffsetY = -5;
         j.drawingContext.shadowBlur = 10;
         j.drawingContext.shadowColor = 'black';
@@ -333,11 +358,11 @@ let a = function (z) {
           b.drawingContext.shadowBlur = 0;
           b.drawingContext.shadowColor = 'white';
           b.square(-200,0,200)
-          angle = angle + b.mouseX/10000;
+          angle = angle + b.mouseX/100000;
         }
         };
         
-        var bolvierkant1d = new p5(bolvier1, 'diepteeff');
+        var bolvierkant1d = new p5(bolvier1, 'rotatieom1d');
 
 
         let lichtaan = function (m) {
@@ -372,7 +397,7 @@ let a = function (z) {
                 }
           }
           };
-          var aanlicht = new p5(lichtaan, 'rotatieom1d');
+          var aanlicht = new p5(lichtaan, 'diepteeff');
 
           let threebox = function (boks) {
 
@@ -394,3 +419,160 @@ let a = function (z) {
       
       
   
+
+
+
+
+
+
+
+
+            let collibol = function (k) {
+
+              k.Ball = class {
+                constructor(x, y, r) {
+                  this.position = new p5.Vector(x, y);
+                  this.velocity = p5.Vector.random2D();
+                  this.velocity.mult(3);
+                  this.r = r;
+                  this.m = r * 0.1;
+                }
+                update() {
+                  this.position.add(this.velocity);
+                }
+              
+                checkBoundaryCollision() {
+                  if (this.position.x > k.width - this.r) {
+                    this.position.x = k.width - this.r;
+                    this.velocity.x *= -1;
+                  } else if (this.position.x < this.r) {
+                    this.position.x = this.r;
+                    this.velocity.x *= -1;
+                  } else if (this.position.y > k.height - this.r) {
+                    this.position.y = k.height - this.r;
+                    this.velocity.y *= -1;
+                  } else if (this.position.y < this.r) {
+                    this.position.y = this.r;
+                    this.velocity.y *= -1;
+                  }
+                }
+              
+                checkCollision(other) {
+                  // Get distances between the balls components
+                  let distanceVect = p5.Vector.sub(other.position, this.position);
+              
+                  // Calculate magnitude of the vector separating the balls
+                  let distanceVectMag = distanceVect.mag();
+              
+                  // Minimum distance before they are touching
+                  let minDistance = this.r + other.r;
+              
+                  if (distanceVectMag < minDistance) {
+                    let distanceCorrection = (minDistance - distanceVectMag) / 2.0;
+                    let d = distanceVect.copy();
+                    let correctionVector = d.normalize().mult(distanceCorrection);
+                    other.position.add(correctionVector);
+                    this.position.sub(correctionVector);
+              
+                    // get angle of distanceVect
+                    let theta = distanceVect.heading();
+                    // precalculate trig values
+                    let sine = k.sin(theta);
+                    let cosine = k.cos(theta);
+              
+                    /* bTemp will hold rotated ball this.positions. You 
+                     just need to worry about bTemp[1] this.position*/
+                    let bTemp = [new p5.Vector(), new p5.Vector()];
+              
+                    /* this ball's this.position is relative to the other
+                     so you can use the vector between them (bVect) as the 
+                     reference point in the rotation expressions.
+                     bTemp[0].this.position.x and bTemp[0].this.position.y will initialize
+                     automatically to 0.0, which is what you want
+                     since b[1] will rotate around b[0] */
+                    bTemp[1].x = cosine * distanceVect.x + sine * distanceVect.y;
+                    bTemp[1].y = cosine * distanceVect.y - sine * distanceVect.x;
+              
+                    // rotate Temporary velocities
+                    let vTemp = [new p5.Vector(), new p5.Vector()];
+              
+                    vTemp[0].x = cosine * this.velocity.x + sine * this.velocity.y;
+                    vTemp[0].y = cosine * this.velocity.y - sine * this.velocity.x;
+                    vTemp[1].x = cosine * other.velocity.x + sine * other.velocity.y;
+                    vTemp[1].y = cosine * other.velocity.y - sine * other.velocity.x;
+              
+                    /* Now that velocities are rotated, you can use 1D
+                     conservation of momentum equations to calculate 
+                     the final this.velocity along the x-axis. */
+                    let vFinal = [new p5.Vector(), new p5.Vector()];
+              
+                    // final rotated this.velocity for b[0]
+                    vFinal[0].x =
+                      ((this.m - other.m) * vTemp[0].x + 2 * other.m * vTemp[1].x) /
+                      (this.m + other.m);
+                    vFinal[0].y = vTemp[0].y;
+              
+                    // final rotated this.velocity for b[0]
+                    vFinal[1].x =
+                      ((other.m - this.m) * vTemp[1].x + 2 * this.m * vTemp[0].x) /
+                      (this.m + other.m);
+                    vFinal[1].y = vTemp[1].y;
+              
+                    // hack to avoid clumping
+                    bTemp[0].x += vFinal[0].x;
+                    bTemp[1].x += vFinal[1].x;
+              
+                    /* Rotate ball this.positions and velocities back
+                     Reverse signs in trig expressions to rotate 
+                     in the opposite direction */
+                    // rotate balls
+                    let bFinal = [new p5.Vector(), new p5.Vector()];
+              
+                    bFinal[0].x = cosine * bTemp[0].x - sine * bTemp[0].y;
+                    bFinal[0].y = cosine * bTemp[0].y + sine * bTemp[0].x;
+                    bFinal[1].x = cosine * bTemp[1].x - sine * bTemp[1].y;
+                    bFinal[1].y = cosine * bTemp[1].y + sine * bTemp[1].x;
+              
+                    // update balls to screen this.position
+                    other.position.x = this.position.x + bFinal[1].x;
+                    other.position.y = this.position.y + bFinal[1].y;
+              
+                    this.position.add(bFinal[0]);
+              
+                    // update velocities
+                    this.velocity.x = cosine * vFinal[0].x - sine * vFinal[0].y;
+                    this.velocity.y = cosine * vFinal[0].y + sine * vFinal[0].x;
+                    other.velocity.x = cosine * vFinal[1].x - sine * vFinal[1].y;
+                    other.velocity.y = cosine * vFinal[1].y + sine * vFinal[1].x;
+                  }
+                }
+              
+                display() {
+                  k.stroke(0);
+                  k.fill(255);
+                  k.drawingContext.shadowOffsetX = 5;
+                  k.drawingContext.shadowOffsetY = -5;
+                  k.drawingContext.shadowBlur = 10;
+                  k.drawingContext.shadowColor = 'black';
+                  k.ellipse(this.position.x, this.position.y, this.r * 2, this.r * 2);
+                }
+              }
+               let balls = [new k.Ball(100, 400, 100), new k.Ball(700, 400, 200)];
+              k.setup = function () {
+                k.createCanvas(k.windowWidth, k.windowHeight);
+              }
+              
+              k.draw = function () {
+                k.background(255);
+                for (let i = 0; i < balls.length; i++) {
+                  let b = balls[i];
+                  b.update();
+                  b.display();
+                  b.checkBoundaryCollision();
+                  balls[0].checkCollision(balls[1]);
+                }
+              }
+                
+              };
+              var bouncebollen = new p5(collibol, 'collition2d3d');
+              

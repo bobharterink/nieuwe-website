@@ -362,7 +362,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst2 {
@@ -377,7 +377,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst3 {
@@ -392,7 +392,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst4 {
@@ -407,7 +407,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 22%;
 }
 
 #hfst5en6 {
@@ -437,7 +437,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst8 {
@@ -454,7 +454,7 @@ transition: 0.3s;
   filter: brightness(100%);
   transition: 0.5s;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 15%;
 }
 
 #hfst9 {
@@ -471,7 +471,7 @@ transition: 0.3s;
   filter: brightness(100%);
   transition: 0.5s;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst10 {
@@ -488,7 +488,7 @@ transition: 0.3s;
   filter: brightness(100%);
   transition: 0.5s;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst11 {
@@ -503,7 +503,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 22%;
 }
 
 #hfst12 {
@@ -518,37 +518,22 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 22%;
 }
 
-#hfst13 {
+#hfst13en14 {
   background-image: url('hoofdstuk13.svg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
 }
 
-#hfst13:hover {
+#hfst13en14:hover {
   background-image: url('hoofdstukfade.svg');
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
-}
-
-#hfst14 {
-  background-image: url('hoofdstuk14.svg');
-  background-size: 100%;
-  font-size: x-small;
-  transition: 0.3s;
-}
-
-#hfst14:hover {
-  background-image: url('hoofdstukfade.svg');
-  background-size: 100%;
-  color: white;
-  font-size: x-small;
-  padding-top: 20%;
+  padding-top: 2%;
 }
 
 #hfst15 {
@@ -563,7 +548,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst16 {
@@ -608,7 +593,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst19 {
@@ -638,7 +623,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 20%;
+  padding-top: 17%;
 }
 
 #hfst21 {
@@ -1342,15 +1327,9 @@ border-radius: 0%;
         .marquee {
           top: 0;
           left: 100%;
-          width: 100%;
-          overflow: hidden;
           position: absolute;
           white-space: nowrap;
-          animation: marquee 30s linear infinite;
-        }
-      
-        .marquee2 {
-          animation-delay: 15s;
+          animation: marquee 45s linear infinite;
         }
       
       @keyframes marquee {
@@ -1358,7 +1337,7 @@ border-radius: 0%;
           left: 100%;
         }
         100% {
-          left: -100%
+          left: -250%
         }
       }
 
@@ -1438,4 +1417,10 @@ border-radius: 0%;
       margin-left: auto;
       margin-right: auto;
       position: relative;
+    }
+
+    .informatiebijtext {
+      font-style: italic;
+      font-size: 12px!important;
+      margin-bottom: 0.5rem!important;
     }

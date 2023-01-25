@@ -216,11 +216,12 @@ let a = function (z) {
         f.polygon(0, 0, f.windowHeight/2, 5);
         f.pop();
       f.push();
-      f.fill(255);
       f.drawingContext.shadowOffsetX = 5;
       f.drawingContext.shadowOffsetY = -5;
       f.drawingContext.shadowBlur = 10;
       f.drawingContext.shadowColor = 'black';
+      f.stroke(0);
+      f.fill(255);
       f.ellipse(f.ix, f.height/2, f.iy, f.iy);      
       f.pop();
   
@@ -575,4 +576,23 @@ let a = function (z) {
                 
               };
               var bouncebollen = new p5(collibol, 'collition2d3d');
+
+
+              let dd = function (ze) {
+   
+                ze.setup = function () {
+               ze.createCanvas(ze.windowWidth, ze.windowHeight,ze.WEBGL);
+             }
+             
+             ze.draw = function () {
+               ze.background(255);
+               ze.push();
+               ze.translate(ze.mouseX-ze.width/2,ze.mouseY-ze.height/2);
+               ze.box(200,200,200);
+               ze.pop();
+             }
+                
+             };
+             
+             var boxx = new p5(dd, 'van1dnaar3d');
               

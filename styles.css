@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: favorit;
+  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -407,7 +407,7 @@ transition: 0.3s;
   background-size: 100%;
   color: white;
   font-size: x-small;
-  padding-top: 22%;
+  padding-top: 17%;
 }
 
 #hfst5en6 {
@@ -537,7 +537,7 @@ transition: 0.3s;
 }
 
 #hfst15 {
-  background-image: url('hoofdstuk15.svg');
+  background-image: url('hoofdstuk15.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
@@ -552,7 +552,7 @@ transition: 0.3s;
 }
 
 #hfst16 {
-  background-image: url('hoofdstuk16.svg');
+  background-image: url('hoofdstuk16.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
@@ -567,7 +567,7 @@ transition: 0.3s;
 }
 
 #hfst17 {
-  background-image: url('hoofdstuk17.svg');
+  background-image: url('hoofdstuk17.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
@@ -582,7 +582,7 @@ transition: 0.3s;
 }
 
 #hfst18 {
-  background-image: url('hoofdstuk18.svg');
+  background-image: url('hoofdstuk18.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
@@ -597,7 +597,7 @@ transition: 0.3s;
 }
 
 #hfst19 {
-  background-image: url('hoofdstuk19.svg');
+  background-image: url('hoofdstuk19.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
@@ -612,7 +612,7 @@ transition: 0.3s;
 }
 
 #hfst20 {
-  background-image: url('hoofdstuk20.svg');
+  background-image: url('hoofdstuk20.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
@@ -627,7 +627,7 @@ transition: 0.3s;
 }
 
 #hfst21 {
-  background-image: url('hoofdstuk21.svg');
+  background-image: url('hoofdstuk21.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;
@@ -642,7 +642,7 @@ transition: 0.3s;
 }
 
 #hfst22 {
-  background-image: url('hoofdstuk22.svg');
+  background-image: url('hoofdstuk22.jpg');
   background-size: 100%;
   font-size: x-small;
   transition: 0.3s;

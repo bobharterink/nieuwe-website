@@ -791,6 +791,10 @@ ul li a {
   margin: 0;
 }
 
+#projects::-webkit-scrollbar {
+  display: none;
+}
+
 .thumbnail {
   position: relative;
   width: 300px;

@@ -45,6 +45,10 @@ section.six{
   display: flex;
 }
 
+.container::-webkit-scrollbar {
+  display: none;
+}
+
 .one {
   background: rgb(36, 164, 138);
 }

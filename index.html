@@ -284,6 +284,26 @@ const observer6 = new IntersectionObserver(entries => { element9.classList.toggl
     }
 );
 observer6.observe( element8 );
+
+// menu 2
+const element80 = document.querySelector('#lijnlandinkom');
+const element90 = document.querySelector('.fa-bars');
+const observer60 = new IntersectionObserver(entries => { element90.classList.toggle( 'animation5', entries[0].isIntersecting );
+},{
+    rootMargin: "-100px",
+    }
+);
+observer60.observe( element80 );
+
+// menu 2
+const element800 = document.querySelector('#werelduitleg');
+const element900 = document.querySelector('.fa-bars');
+const observer600 = new IntersectionObserver(entries => { element900.classList.toggle( 'animation5', entries[0].isIntersecting );
+},{
+    rootMargin: "-100px",
+    }
+);
+observer600.observe( element800 );
 </script>
 
 <script>

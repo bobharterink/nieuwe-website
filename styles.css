@@ -1419,6 +1419,17 @@ border-radius: 0%;
       position: relative;
     }
 
+    #clickbol1 {
+      background-color: rgba(0,0,0,0);
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      margin-bottom: -400px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
     .informatiebijtext {
       font-style: italic;
       font-size: 12px!important;

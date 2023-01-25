@@ -431,12 +431,13 @@ let a = function (z) {
             let collibol = function (k) {
 
               k.Ball = class {
-                constructor(x, y, r) {
+                constructor(x, y, r,type) {
                   this.position = new p5.Vector(x, y);
                   this.velocity = p5.Vector.random2D();
                   this.velocity.mult(3);
                   this.r = r;
                   this.m = r * 0.1;
+                  this.type = type;
                 }
                 update() {
                   this.position.add(this.velocity);
@@ -549,18 +550,27 @@ let a = function (z) {
                 }
               
                 display() {
+                  if(this.type == 0){
+                  k.push();
                   k.stroke(0);
                   k.fill(255);
                   k.drawingContext.shadowOffsetX = 5;
                   k.drawingContext.shadowOffsetY = -5;
                   k.drawingContext.shadowBlur = 10;
                   k.drawingContext.shadowColor = 'black';
-                  k.ellipse(this.position.x, this.position.y, this.r * 2, this.r * 2);
+                    k.ellipse(this.position.x, this.position.y, this.r * 2, this.r * 2);
+                    k.pop();
+                  }else{
+                      k.rect(this.position.x-this.r, this.position.y-this.r, this.r * 2, this.r * 2);
+                  }
+                  
+                
                 }
               }
-               let balls = [new k.Ball(100, 400, 100), new k.Ball(700, 400, 200)];
+               let balls = [new k.Ball(100, 400, 200,0), new k.Ball(700, 400, 100,1)];
               k.setup = function () {
                 k.createCanvas(k.windowWidth, k.windowHeight);
+                
               }
               
               k.draw = function () {
@@ -575,6 +585,7 @@ let a = function (z) {
               }
                 
               };
+
               var bouncebollen = new p5(collibol, 'collition2d3d');
 
 

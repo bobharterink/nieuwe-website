@@ -1,5 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="a" xmlns="http://www.w3.org/2000/svg" width="10.019cm" height="6.244cm" viewBox="0 0 284 177">
-  <rect width="284" height="177"/>
-  <polygon points="170.83 0 113.17 0 66.523 33.892 48.705 88.729 66.523 143.567 113.17 177.458 170.83 177.458 217.477 143.567 235.295 88.729 217.477 33.892 170.83 0" fill="#fff"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.5.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 284 177" style="enable-background:new 0 0 284 177;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:0.7312;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;stroke:#000000;stroke-width:0.7312;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+</style>
+<rect x="-120.6" y="119.2" width="26.9" height="48.7"/>
+<rect x="-93.7" y="142.3" width="24.3" height="51.2"/>
+<circle cx="142" cy="297.7" r="1.9"/>
+<g>
+	
+		<image style="overflow:visible;" width="111" height="111" xlink:href="2A57AA5E9505CF66.png"  transform="matrix(1 0 0 1 27 248.9953)">
+	</image>
+	<g>
+		<circle class="st0" cx="75.4" cy="297.7" r="39.3"/>
+	</g>
+</g>
+<rect x="171.4" y="264.8" class="st0" width="65.8" height="65.8"/>
+<path class="st0" d="M197,236.6c0,0-48.9-49.3-96.5-1.7"/>
+<path class="st0" d="M80.1,360.4c0,0,60.4,54.9,115.3,0"/>
+<polygon class="st1" points="229.7,500.7 218.2,512 186.4,512 197.9,500.7 "/>
+<rect x="197.9" y="512" class="st1" width="20.3" height="20.5"/>
+<rect x="186.4" y="512" class="st2" width="31.8" height="31.8"/>
+<polygon class="st1" points="229.7,500.7 229.7,532.5 218.2,543.8 218.2,512 "/>
+<line class="st1" x1="80.1" y1="543.8" x2="84.3" y2="543.8"/>
+<line class="st1" x1="93.4" y1="543.8" x2="134.7" y2="543.8"/>
+<line class="st1" x1="140.4" y1="502.5" x2="140.4" y2="543.8"/>
+<line class="st1" x1="181.7" y1="502.5" x2="181.7" y2="543.8"/>
+<line class="st1" x1="140.4" y1="543.8" x2="181.7" y2="543.8"/>
+<line class="st1" x1="140.4" y1="502.5" x2="181.7" y2="502.5"/>
+<g>
+	
+		<image style="overflow:visible;" width="512" height="505" xlink:href="2A57AA5E9505CF6A.png"  transform="matrix(0.1328 0 0 0.1328 90.7304 674.8386)">
+	</image>
+</g>
+<rect x="80.7" y="555.9" style="fill:none;" width="55.7" height="8.8"/>
+<text transform="matrix(1 0 0 1 80.666 561.5586)" style="font-family:'MyriadPro-Regular'; font-size:8px;">mouseX</text>
+<rect x="140.4" y="555.9" style="fill:none;" width="55.7" height="8.8"/>
+<text transform="matrix(1 0 0 1 140.4306 561.5586)" style="font-family:'MyriadPro-Regular'; font-size:8px;">mouseY</text>
+<rect x="187.3" y="555.9" style="fill:none;" width="55.7" height="18.9"/>
+<text transform="matrix(1 0 0 1 187.2773 559.4287)"><tspan x="0" y="0" style="font-family:'MyriadPro-Regular'; font-size:5px;">door een knop voorbeeld </tspan><tspan x="0" y="6" style="font-family:'MyriadPro-Regular'; font-size:5px;">(k) dat het diepte krijgt</tspan></text>
+<rect x="96.3" y="42.8" class="st3" width="91.5" height="91.5"/>
 </svg>

@@ -656,9 +656,9 @@ transition: 0.3s;
   padding-top: 5%;
 }
 
-html,body {
+/* html,body {
   overflow-x: hidden
-}
+} */
 
 html {
   overflow-y: scroll;

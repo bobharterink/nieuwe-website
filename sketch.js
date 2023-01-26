@@ -10,8 +10,8 @@ p.setup = function () {
 p5.disableFriendlyErrors = true
  // het laden van het model duurt even..
  p.createCanvas(p.windowWidth, p.windowHeight);
- video = p.createCapture(p.VIDEO);
- video.size(p.width, p.height);
+ video = p.createCapture(p.VIDEO, p.windowWidth, p.windowHeight);
+ p.frameRate(20);
  
  facemesh = ml5.facemesh(video, p.modelReady);
  facemesh.on("face", results => {

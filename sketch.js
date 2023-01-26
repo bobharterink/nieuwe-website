@@ -1,4 +1,17 @@
 let s = function (p) {
+  p.setup = function () {
+    p.createCanvas(p.windowWidth, p.windowHeight);
+  }
+  
+  p.draw = function () {
+    p.background(255);
+    p.line(p.windowWidth/2, 0, p.mouseX, p.windowHeight);
+    p.strokeWeight(10); 
+  }
+  };
+  var myp5 = new p5(s, 'vrouwdiv');
+  
+  /* let s = function (p) {
 
 let facemesh;
 let video;
@@ -68,7 +81,7 @@ p.drawKeypoints = function () {
  }
 }
 };
-var myp5 = new p5(s, 'vrouwdiv');
+var myp5 = new p5(s, 'vrouwdiv'); */
 
 
 ////////////// lijntje
@@ -405,7 +418,7 @@ let a = function (z) {
 
             boks.setup = function () {
               boks.createCanvas(boks.windowWidth, boks.windowHeight, boks.WEBGL);
-              
+              boks.frameRate(24);
             }
             boks.draw = function () {
               boks.background(255);
@@ -570,7 +583,7 @@ let a = function (z) {
                let balls = [new k.Ball(100, 400, 200,0), new k.Ball(700, 400, 100,1)];
               k.setup = function () {
                 k.createCanvas(k.windowWidth, k.windowHeight);
-                
+                k.frameRate(24);
               }
               
               k.draw = function () {
